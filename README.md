@@ -148,7 +148,6 @@ ui-components-starter/
 │── vite.config.ts
 │── tsconfig.json
 │── tailwind.config.js
-│── README.md
 
 📦 Installation
 
