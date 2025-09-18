@@ -54,25 +54,18 @@ Example Usage:
   size="md"
 />
 
-2. DataTable Component
 
+2. DataTable Component
 A reusable table for displaying structured data.
 
 Features:
-
-Display tabular data with columns
-
-Column sorting (ascending/descending)
-
-Row selection (single/multiple)
-
-Loading and empty states
-
-Fully typed with TypeScript generics
-
-Responsive design with TailwindCSS
-
-Accessible with semantic HTML <table>
+ — Display tabular data with columns
+ — Column sorting (ascending/descending)
+ — Row selection (single/multiple)
+ — Loading and empty states
+ — Fully typed with TypeScript generics
+ — Responsive design with TailwindCSS
+ — Accessible with semantic HTML <table>
 
 Props:
 ```tsx
