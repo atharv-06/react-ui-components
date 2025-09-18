@@ -1,4 +1,5 @@
-# 🚀 UI Components Library (React + TypeScript + TailwindCSS + Storybook)
+# 🚀 UI Components Library 
+(React + TypeScript + TailwindCSS + Storybook)
 
 This project is a **UI components library** built with **React, TypeScript, TailwindCSS, Vite, and Storybook**.  
 It includes two reusable, accessible, and responsive components: **InputField** and **DataTable**.  
@@ -11,6 +12,7 @@ The goal of this project is to showcase modern **frontend development practices*
 - Component **documentation & demos** with Storybook
 - **Unit tests** with Jest + React Testing Library
 
+---
 
 ## 📖 Overview of Components
 
@@ -27,23 +29,22 @@ A flexible input component designed for forms and user input.
 - Accessible via `aria-invalid`, `aria-describedby`, and `htmlFor` label binding
 
 **Props:**
-```tsx
-interface DataTableProps<T> {
-  data: T[];
-  columns: Column<T>[];
-  loading?: boolean;
-  selectable?: boolean;
-  onRowSelect?: (selectedRows: T[]) => void;
+```ts
+interface InputFieldProps {
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  label?: string;
+  placeholder?: string;
+  helperText?: string;
+  errorMessage?: string;
+  disabled?: boolean;
+  invalid?: boolean;
+  variant?: 'filled' | 'outlined' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
 }
+```
 
-interface Column<T> {
-  key: string;
-  title: string;
-  dataIndex: keyof T;
-  sortable?: boolean;
-}
-
-Example Usage:
+**Example Usage:**
 ```tsx
 <InputField
   label="Email"
@@ -53,22 +54,24 @@ Example Usage:
   variant="outlined"
   size="md"
 />
+```
 
+---
 
-2. DataTable Component
+### 2. DataTable Component
 A reusable table for displaying structured data.
 
-Features:
- — Display tabular data with columns
- — Column sorting (ascending/descending)
- — Row selection (single/multiple)
- — Loading and empty states
- — Fully typed with TypeScript generics
- — Responsive design with TailwindCSS
- — Accessible with semantic HTML <table>
+**Features:**
+- Display tabular data with columns
+- Column sorting (ascending/descending)
+- Row selection (single/multiple)
+- Loading and empty states
+- Fully typed with TypeScript generics
+- Responsive design with TailwindCSS
+- Accessible with semantic HTML `<table>`
 
-Props:
-```tsx
+**Props:**
+```ts
 interface DataTableProps<T> {
   data: T[];
   columns: Column<T>[];
@@ -83,10 +86,10 @@ interface Column<T> {
   dataIndex: keyof T;
   sortable?: boolean;
 }
+```
+
+**Example Usage:**
 ```tsx
-
-Example Usage:
-
 <DataTable
   data={[
     { id: 1, name: "Atharv", role: "Developer" },
@@ -100,29 +103,22 @@ Example Usage:
   selectable
   onRowSelect={(rows) => console.log(rows)}
 />
+```
 
-🛠 Tech Stack
+---
 
-⚛️ React
- — UI framework
+## 🛠 Tech Stack
+- ⚛️ **React** — UI framework  
+- 🟦 **TypeScript** — strong typing  
+- 🎨 **TailwindCSS** — styling & responsive design  
+- ⚡ **Vite** — fast development/build tool  
+- 📘 **Storybook** — component documentation  
+- 🧪 **Jest + React Testing Library** — unit testing  
 
-🟦 TypeScript
- — strong typing
+---
 
-🎨 TailwindCSS
- — styling & responsive design
-
-⚡ Vite
- — fast development/build tool
-
-📘 Storybook
- — component documentation
-
-🧪 Jest
- + React Testing Library
- — unit testing
-
-📂 Project Structure
+## 📂 Project Structure
+```lua
 ui-components-starter/
 │── src/
 │   ├── components/
@@ -141,56 +137,59 @@ ui-components-starter/
 │── vite.config.ts
 │── tsconfig.json
 │── tailwind.config.js
+│── README.md
+```
 
-📦 Installation
+---
 
+## 📦 Installation
 Clone the repo and install dependencies:
 
+```bash
 git clone <your-repo-url>
 cd ui-components-starter
 npm install
+```
 
-▶️ Running the Project
+---
 
+## ▶️ Running the Project
 Start the development server:
 
+```bash
 npm run dev
-
-
-Open http://localhost:5173
-.
+```
+👉 Open [http://localhost:5173](http://localhost:5173).
 
 Run Storybook for component documentation:
 
+```bash
 npm run storybook
+```
+👉 Open [http://localhost:6006](http://localhost:6006).
 
+---
 
-Open http://localhost:6006
-.
-
-🧪 Testing
-
+## 🧪 Testing
 Run tests:
 
+```bash
 npm run test
+```
 
+**Basic tests cover:**
+- InputField renders labels, error messages  
+- DataTable displays rows and supports selection  
 
-Basic tests cover:
-InputField renders labels, error messages
-DataTable displays rows and supports selection
+---
 
-✅ Requirements Met
+## ✅ Requirements Met
+✔ TypeScript with proper typing  
+✔ Responsive design (TailwindCSS)  
+✔ Accessibility (ARIA + semantic HTML)  
+✔ Clean, modern styling  
+✔ Basic unit tests included  
+✔ Two working components  
+✔ Example usage (App + Storybook)  
+✔ Documentation (README + Storybook)  
 
-✔ TypeScript with proper typing
-✔ Responsive design (TailwindCSS)
-✔ Accessibility (ARIA + semantic HTML)
-✔ Clean, modern styling
-✔ Basic unit tests included
-✔ Two working components
-✔ Example usage (App + Storybook)
-✔ Documentation (README + Storybook)
-
-👨‍💻 Author
-
-Developed by Atharv Lokhande
-Frontend Developer 🚀
