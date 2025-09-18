@@ -27,21 +27,24 @@ A flexible input component designed for forms and user input.
 - Accessible via `aria-invalid`, `aria-describedby`, and `htmlFor` label binding
 
 **Props:**
-
-interface InputFieldProps {
-  value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  label?: string;
-  placeholder?: string;
-  helperText?: string;
-  errorMessage?: string;
-  disabled?: boolean;
-  invalid?: boolean;
-  variant?: 'filled' | 'outlined' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
+```tsx
+interface DataTableProps<T> {
+  data: T[];
+  columns: Column<T>[];
+  loading?: boolean;
+  selectable?: boolean;
+  onRowSelect?: (selectedRows: T[]) => void;
 }
-Example Usage:
 
+interface Column<T> {
+  key: string;
+  title: string;
+  dataIndex: keyof T;
+  sortable?: boolean;
+}
+
+Example Usage:
+```tsx
 <InputField
   label="Email"
   placeholder="Enter your email"
@@ -72,7 +75,7 @@ Responsive design with TailwindCSS
 Accessible with semantic HTML <table>
 
 Props:
-
+```tsx
 interface DataTableProps<T> {
   data: T[];
   columns: Column<T>[];
@@ -87,7 +90,7 @@ interface Column<T> {
   dataIndex: keyof T;
   sortable?: boolean;
 }
-
+```tsx
 
 Example Usage:
 
