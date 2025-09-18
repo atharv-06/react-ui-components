@@ -1,5 +1,4 @@
-# 🚀 UI Components Library 
-# (React + TypeScript + TailwindCSS + Storybook)
+# 🚀 UI Components Library (React + TypeScript + TailwindCSS + Storybook)
 
 This project is a **UI components library** built with **React, TypeScript, TailwindCSS, Vite, and Storybook**.  
 It includes two reusable, accessible, and responsive components: **InputField** and **DataTable**.  
